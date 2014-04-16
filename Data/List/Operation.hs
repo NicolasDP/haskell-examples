@@ -6,7 +6,7 @@ getFirstPairWhenSumIs10 :: [Integer] -> Maybe (Int, Int)
 getFirstPairWhenSumIs10 = getPairIndexWith (\x y -> x + y == 10) (\x -> x < 10)
 
 -- Function to get the index in a list of the 2 first elements which comply
--- with a test. It is also possible to apply a filter to avoid other load.
+-- with a test. It is also possible to apply a filter to avoid over load.
 getPairIndexWith :: (Eq a) => (a -> a -> Bool) -- a test function
                            -> (a -> Bool)      -- a filter function (could be (\_ -> True)
                            -> [a]              -- a list to look in
